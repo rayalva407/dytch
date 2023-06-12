@@ -4,10 +4,22 @@
   "name": "Dytch",
   "version": "1.0",
   "description": "Dynamically changes the title of any browser tab",
+  "homepage_url": "https://github.com/rayalva407/dytch",
   "icons": {
     "64": "resources/title.png",
     "128": "resources/title-128.png"
   },
+  "permissions": [
+    "activeTab"
+  ],
+  "browser_action": {
+    "default_icon": "resources/title-128.png",
+    "default_title": "dytch",
+    "default_popup": "popup/add_record.html"
+  },
+  "web_accessible_resources": [
+    "resources/title.png"
+  ],
   "content_scripts": [
     {
       "matches": ["*://*.mozilla.org/*"],
