@@ -1,0 +1,22 @@
+{
+
+  "manifest_version": 2,
+  "name": "Dytch",
+  "version": "1.0",
+  "description": "Dynamically changes the title of any browser tab",
+  "icons": {
+    "64": "resources/title.png",
+    "128": "resources/title-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.mozilla.org/*"],
+      "js": ["dytch.js"]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "dytch@example.com"
+    }
+  }
+}
